@@ -1,0 +1,65 @@
+* { font-family:sans-serif; }
+h1 { font-size:100%; font-weight:bold; }
+#h1screen { display:inline-block; margin-right:15px; height:30px; }
+#menuControl { display:inline-block; }
+table { background-color:white; }
+td { background-color:white; }
+#mainMenu { margin-bottom:15px; }
+#divName { display:none; }
+#divNo { display:none; }
+.divDateTime { display:none; }
+
+.hataKouho { padding:1px 8px 1px 4px; display:inline-block; border-radius:3px; margin-left:1px; }
+#janButtons { margin-right:5px; display:inline-block; }
+#rensyuButtons { display:inline-block; }
+#playButtons { margin-top:7px; font-size:18px; }
+#divhataColors { margin-bottom:8px; }
+#hataLesson { margin:0; }
+
+td { text-align:center; }
+.lesson { border:1px solid #000; border-collapse:collapse; margin-bottom:3px; table-layout:fixed; width:100%; min-width:500px; }
+.lesson td { border:1px solid #000; vertical-align:middle; }
+.lessonNum { font-size:22px; background-color:white; }
+.tdJanNum { font-size:12px; }
+.tdHata { font-size:18px; }
+
+.fontOrange { color:orangered; }
+.fontBlue { color:blue; }
+.fontGreen { color:forestgreen; }
+
+button { display: inline-block; padding:5px; text-align: center; text-decoration: none; background-color:#fff; border:1px solid #aaa; border-radius:3px; }
+button:focus { outline:0; }
+button.lessonMode { background-color:#fff; color:rgb(0, 105, 241); font-weight:bold; display:inline-block; margin-right:1px; }
+button.lessonMode.active { outline:0; border:1px solid #333; color:black; background-color:rgb(199, 230, 255); }
+button.active { background-color:rgb(199, 230, 255); border-color:#333; }
+button.janNumButton { margin-left:1px; }
+button.playButton { border:0; padding-left:15px; padding-right:15px; margin-right:4px; }
+
+#submenu { position:absolute; top:15px; right:15px; vertical-align:top; }
+#submenu span { padding:0; vertical-align:top; }
+.buttonImg { padding:0; margin:0; width:45px; height:32px; vertical-align:top; background-color:white; }
+.buttonImg img { height:24px; width:auto; vertical-align:top; }
+#buttonReflesh { margin-right:20px; }
+#toggleMainMenu { width:32px; height:32px; padding:0; }
+img#toggleMainMenuChevron{ width:25px; height:25px; }
+
+.transparent { opacity:0.2; }
+.tdHata.highlight { opacity:1; }
+.tdJanNum.highlight { opacity:1; }
+table.highlight,
+table.highlight .trHata td,
+table.highlight .tdHandle  { border-bottom:15px solid aqua !important; }
+
+ul#sortableLesson { list-style:none; display:table-row; margin:0; padding:0; }
+ul#sortableLesson li { display:table-row; }
+
+.tdHandle { width:25px; visibility:hidden; }
+.visible { visibility:visible !important; }
+.hidden { display:none; }
+
+#h1print { display:none; }
+#kasumiCopy { display:none; }
+.trKakikomi { display:none; }
+.tdSpace { display:none; }
+
+.vflip { transform:scale(1,-1); }

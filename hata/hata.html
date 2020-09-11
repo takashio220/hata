@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>はたのページ</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link href="hata.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="print.css" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.cookie-1.4.1.min.js"></script>
+    <script type="text/javascript" src='lib/mt.js'></script>
+    <script type="text/javascript" src='hata.js'></script>
+    <script type="text/javascript" src='lib/jquery.ui.touch-punch.min.js'></script>
+</head>
+<body>
+<section>
+    <h1 id="h1screen">はたのページ</h1>
+    <div id="menuControl"><button type='button' id='toggleMainMenu'><img src="images/up.svg" id="toggleMainMenuChevron" /></button></div>
+    <h1 id="h1print">ハタの記録</h1>
+    <div id="divName">お子さまの名前　　　　　　　　　　　　　　　　（　　歳　　か月）</div>
+    <div id="divNo">No.　　　　　　　　　</div>
+    <div id="mainMenu">
+        <div id="lessonMaker">
+            <div id="divhataColors"></div>
+            <div id="janButtons"></div>
+            <div id="rensyuButtons"></div>
+        </div>
+        <div id="playButtons" class="hidden">音を再生する：</div>
+    </div>
+    <div id="submenu">
+        <span id="buttonReflesh" class="hidden"><button type="button" class="buttonImg" id='refleshLesson'><img src="images/reflesh.svg" class="submenu_icon" alt="レッスンを作り直す" /></button></span>
+        <span id="buttonResetHighlight" class="hidden"><button type='button' class="buttonImg" id='resetHighlightButton'><img src="images/face.svg" class="submenu_icon" alt="強調表示を解除する" /></button></span>
+        <span id="buttonToggleHandle" class="hidden"><button type='button' class="buttonImg" id='toggleHandleButton'><img src="images/sort.svg" class="submenu_icon" alt="並べ替えボタン切り替え" /></button></span>
+        <span id="buttonTogglePlay"><button type='button' class="buttonImg" id='togglePlay'><img src="images/volume.svg" class="submenu_icon" alt="音を鳴らすボタンを表示" /></button></span>
+    </div>
+    <div id="hataLesson"></div>
+    <div id="kasumiCopy">かすみミュージックスクール♪</div>
+</section>
+</body>
+</html>
