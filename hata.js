@@ -25,7 +25,7 @@ $(function()
     //[...Array(14).keys()].map(i=>`(${++i})`); //適当な連番にしたいときはこんな感じで何個でもいける
     const lessonNum = lessonIds.length; //何セット分出力するか
     const printLessonNum = 14; //印刷するレッスン回数(14でピッタリA4ヨコ)
-    const dateTimeHtml = "　 /　　( 　)<br/>AM/PM　 ：　"; //日時書き込み蘭(印刷用)
+    const dateTimeHtml = "　  /　　(　　)<br/>AM/PM　　 ： 　"; //日時書き込み蘭(印刷用)
 
     const lessonModeIndexFlag = { kouhan:-1 }; //レッスン生成時にnewSoundIndexを計算するためのフラグ
     const lessonModes = [
