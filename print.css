@@ -18,7 +18,7 @@
     #h1print { display:inline-block; }
     #divName { display:inline-block; font-size:11pt; text-decoration:underline; margin-left:4cm; }
     #divNo { display:inline-block; font-size:11pt; text-decoration:underline; margin-left:3.5cm; }
-    #kasumiCopy { display:block; text-align:right; width:267mm; font-size:8pt; }
+    #schoolCopy { display:block; text-align:right; width:267mm; font-size:8pt; }
     #mainMenu { display:none; }
     .trKakikomi { display:table-row; height:4mm; }
     .trKakikomi td { border-top:1px dashed #000 !important; border-left:1px solid #000; border-right:1px solid #000; }
