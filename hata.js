@@ -12,8 +12,8 @@ $(function()
         { displayName:"ピンク", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
         { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
-        { displayName:"肌", color:"bisque", fontColor:"black" },
-        { displayName:"藤", color:"mediumpurple", fontColor:"white" },
+        { displayName:"うす橙", color:"bisque", fontColor:"black" },
+        { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
         { displayName:"灰", color:"gray", fontColor:"white" },
         { displayName:"水", color:"skyblue", fontColor:"black" },
     ];
