@@ -7,7 +7,7 @@ $(function()
         { displayName:"青", color:"blue", fontColor:"white" },
         { displayName:"黒", color:"black", fontColor:"white" },
         { displayName:"緑", color:"green", fontColor:"white" },
-        { displayName:"橙", color:"orange", fontColor:"black" },
+        { displayName:"ｵﾚﾝｼﾞ", color:"orange", fontColor:"black" },
         { displayName:"紫", color:"purple", fontColor:"white" },
         { displayName:"ピンク", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
