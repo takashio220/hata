@@ -11,11 +11,14 @@ $(function()
         { displayName:"紫", color:"purple", fontColor:"white" },
         { displayName:"ピンク", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
+        { displayName:"ﾗﾁｽﾐ", color:"#e9e9e9", fontColor:"black" },
+        /*
         { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
         { displayName:"うす橙", color:"bisque", fontColor:"black" },
         { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
         { displayName:"灰", color:"gray", fontColor:"white" },
         { displayName:"水", color:"skyblue", fontColor:"black" },
+        */
     ];
 
     let hataDefaultIndex = 3; //はたのデフォルトの色(配列のインデックス)
