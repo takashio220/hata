@@ -8,33 +8,35 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <link href="hata.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="print.css" rel="stylesheet" type="text/css" media="print" />
-    <script type="text/javascript" src="lib/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="lib/jquery.cookie-1.4.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript" src='lib/mt.js'></script>
+    <script type="text/javascript" src='lib/jquery.ui.sortable-animation.js'></script>
     <script type="text/javascript" src='hata.js'></script>
-    <script type="text/javascript" src='lib/jquery.ui.touch-punch.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
 </head>
 <body>
 <section>
     <h1 id="h1screen">はたのページ</h1>
-    <div id="menuControl"><button type='button' id='toggleMainMenu'><img src="images/up.svg" id="toggleMainMenuChevron" /></button></div>
+    <!--<div id="menuControl"><button type='button' id='toggleMainMenu'><img src="images/up.svg" id="toggleMainMenuChevron" /></button></div>-->
     <h1 id="h1print">ハタの記録</h1>
     <div id="divName">お子さまの名前&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（&emsp;&emsp;&emsp;歳&emsp;&emsp;&emsp;か月）</div>
     <div id="divNo">No.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
     <div id="mainMenu">
         <div id="lessonMaker">
-            <div id="divhataColors"></div>
+            <div id="divhataColors"><span id="hataColors" class="sortable_hataSettings"></span> <button type='button' id='settingsButton' class="hataSettingsButton">色を変更...</button></div>
+            <div id="divHiddenHataColors" class="hidden"><p>使い方：練習で使うハタを上に移動します。一番右＝新しいハタにします。<br />練習で使わないハタは下に移動できます。設定はブラウザに180日間保存されます。</p><span id="hiddenHataColors" class="sortable_hataSettings"></span> <button type='button' id='saveSettingsButton' class="hataSettingsButton">保存して閉じる</button> <button type='button' id='recoverSettingsButton' class="hataSettingsButton">初期状態に戻す</button></div>
             <div id="janButtons"></div>
             <div id="rensyuButtons"></div>
         </div>
-        <div id="playButtons" class="hidden">音を再生する：</div>
+        <!-- <div id="playButtons" class="hidden">音を再生する：</div> -->
     </div>
     <div id="submenu">
         <span id="buttonReflesh" class="hidden"><button type="button" class="buttonImg" id='refleshLesson'><img src="images/reflesh.svg" class="submenu_icon" alt="レッスンを作り直す" /></button></span>
         <span id="buttonResetHighlight" class="hidden"><button type='button' class="buttonImg" id='resetHighlightButton'><img src="images/face.svg" class="submenu_icon" alt="強調表示を解除する" /></button></span>
         <span id="buttonToggleHandle" class="hidden"><button type='button' class="buttonImg" id='toggleHandleButton'><img src="images/sort.svg" class="submenu_icon" alt="並べ替えボタン切り替え" /></button></span>
-        <span id="buttonTogglePlay"><button type='button' class="buttonImg" id='togglePlay'><img src="images/volume.svg" class="submenu_icon" alt="音を鳴らすボタンを表示" /></button></span>
+        <!-- <span id="buttonTogglePlay"><button type='button' class="buttonImg" id='togglePlay'><img src="images/volume.svg" class="submenu_icon" alt="音を鳴らすボタンを表示" /></button></span> -->
     </div>
     <div id="hataLesson"></div>
 </section>
