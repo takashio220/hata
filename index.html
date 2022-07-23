@@ -21,8 +21,7 @@
     <h1 id="h1screen">はたのページ</h1>
     <!--<div id="menuControl"><button type='button' id='toggleMainMenu'><img src="images/up.svg" id="toggleMainMenuChevron" /></button></div>-->
     <h1 id="h1print">ハタの記録</h1>
-    <div id="divName">お子さまの名前&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（&emsp;&emsp;&emsp;歳&emsp;&emsp;&emsp;か月）</div>
-    <div id="divNo">No.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+    <div id="divNameNo"><span class="underline">お子さまの名前&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（&emsp;&emsp;&emsp;歳&emsp;&emsp;&emsp;か月）</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="underline">No.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span></div>
     <div id="mainMenu">
         <div id="lessonMaker">
             <div id="divhataColors"><span id="hataColors" class="sortable_hataSettings"></span> <button type='button' id='settingsButton' class="hataSettingsButton">色を変更...</button></div>
@@ -33,6 +32,7 @@
         <!-- <div id="playButtons" class="hidden">音を再生する：</div> -->
     </div>
     <div id="submenu">
+        <span id="buttonPrint" class="hidden"><button type="button" class="buttonImg" id='printLesson'><img src="images/print.svg" class="submenu_icon" alt="印刷" /></button></span>
         <span id="buttonReflesh" class="hidden"><button type="button" class="buttonImg" id='refleshLesson'><img src="images/reflesh.svg" class="submenu_icon" alt="レッスンを作り直す" /></button></span>
         <span id="buttonResetHighlight" class="hidden"><button type='button' class="buttonImg" id='resetHighlightButton'><img src="images/face.svg" class="submenu_icon" alt="強調表示を解除する" /></button></span>
         <span id="buttonToggleHandle" class="hidden"><button type='button' class="buttonImg" id='toggleHandleButton'><img src="images/sort.svg" class="submenu_icon" alt="並べ替えボタン切り替え" /></button></span>

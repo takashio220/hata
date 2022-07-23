@@ -264,6 +264,7 @@ $(function()
 
         showToggleHandleButton();
         showRefleshButton();
+        showPrintButton();
         resetLessonHighlight();
         resetHataHighlight();
         hideResetHighlightButton();
@@ -294,6 +295,8 @@ $(function()
     function hideResetHighlightButton(){ $('#buttonResetHighlight').addClass("hidden"); }
 
     function showRefleshButton(){ $("#buttonReflesh").removeClass("hidden"); }
+
+    function showPrintButton(){ $('#buttonPrint').removeClass("hidden"); }
 
     //function hideRefleshButton(){ $("#buttonReflesh").addClass("hidden"); }
 
@@ -451,6 +454,9 @@ $(function()
             showEntireLessons();
             hideResetHighlightButton();
         });
+
+        //印刷ボタンの処理
+        $('#printLesson').click(function(){ window.print(); });
 
         //再生メニュー表示ボタンの機能
         //音声ファイルを読み込んでおく

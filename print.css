@@ -1,8 +1,8 @@
 @media print
 {
-    * { font-family:"MS Pゴシック",sans-serif; -webkit-print-color-adjust: exact; }
+    * { font-family:"MS Pゴシック",sans-serif; -webkit-print-color-adjust: exact; margin:0; padding0; }
     #hataLesson { margin:0; width:90%; }
-    td { text-align:center; margin:0; padding:0; }
+    td { text-align:center; margin:0; padding:0; box-sizing:border-box; }
     .lesson { border:1px solid #000; border-collapse:collapse; margin-bottom:0.5mm; table-layout:fixed; }
     .lesson td { vertical-align:middle; }
     ul#sortableLesson { list-style:none; display:table-row; margin:0; padding:0; }
@@ -10,26 +10,31 @@
     #submenu { display:none; }
     #menuControl { display:none; }
 
-    html,body { height:100%; margin:0; padding:0; }
-    body { size:A4 landscape; }
-    section { padding:3mm 15mm 0mm; width:267mm; page-break-before:always; }
+    html,body { margin:0; padding:0; }
+    section { margin:0; size:A4 landscape; padding:2mm 15mm 0; width:287mm; box-sizing:border-box; page-break-before:always; }
+    section:last-child { page-break-after:auto; }
     h1 { margin:0; font-style:italic; font-size:11pt; }
     #h1screen { display:none; }
     #h1print { display:inline-block; }
-    #divName { display:inline-block; font-size:11pt; text-decoration:underline; margin-left:4cm; }
-    #divNo { display:inline-block; font-size:11pt; text-decoration:underline; margin-left:3.5cm; }
+    #divNameNo { display:inline-block; font-size:11pt; margin-left:3.5cm; }
+    .underline { text-decoration:underline; }
     #mainMenu { display:none; }
     .trKakikomi { display:table-row; height:5mm; }
     .trKakikomi td { border-top:1px dashed #000 !important; border-left:1px solid #000; border-right:1px solid #000; }
     .tdSpace { display:table-cell; }
-    .lesson { width:267mm; height:13.5mm !important; margin-bottom:-1px; }
+    .lesson { width:267mm; height:13mm !important; margin-bottom:-1px; }
     .tdHandle { display:none; }
     .tdJanNum { font-size:7pt; line-height:8pt; border:1px solid #000; border-bottom-style:double !important; border-bottom-width:3px; background-color:white !important; color:black !important; }
     .tdHata { font-weight:normal; font-size:8pt; line-height:12pt; vertical-align:middle; border-width:1px 1px 0 1px; border-style:solid; border-top-style:none !important; padding:0; border-color:black !important; background-clip:padding-box;}
     .noprint { display:none !important; }
     .lessonNum { display:none; }
-    .tdlessonNum { width:27mm; height:13.5mm !important; }
+    .tdlessonNum { width:27mm; height:13mm !important; }
     .divDateTime { display:block; width:27mm; font-size:9pt; line-height:16pt; margin-top:0.7mm; }
 
     .mask { background:rgba(255,255,255,0.4); color:black; width:100%; height:100%; }
+}
+@page
+{
+    margin:0;
+    size:A4 landscape;
 }
