@@ -16,6 +16,7 @@ $(function()
         { displayName:"ピンク", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
         { displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
+        { displayName:"ﾗﾁｽﾐ", color:"yellowgreen", fontColor:"black" },
         { displayName:"ﾚﾌｨｽﾗ", color:"bisque", fontColor:"black" },
         // { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
         // { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
