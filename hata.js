@@ -13,7 +13,7 @@ $(function()
         { displayName:"緑", color:"green", fontColor:"white" },
         { displayName:"ｵﾚﾝｼﾞ", color:"orange", fontColor:"black" },
         { displayName:"紫", color:"purple", fontColor:"white" },
-        { displayName:"ピンク", color:"pink", fontColor:"black" },
+        { displayName:"ﾋﾟﾝｸ", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
         { displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
         { displayName:"ﾗﾁｽﾐ", color:"yellowgreen", fontColor:"black" },
