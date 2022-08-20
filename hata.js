@@ -16,11 +16,11 @@ $(function()
         { displayName:"ピンク", color:"pink", fontColor:"black" },
         { displayName:"茶", color:"brown", fontColor:"white" },
         { displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
-        { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
-        { displayName:"うす橙", color:"bisque", fontColor:"black" },
-        { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
-        { displayName:"灰", color:"gray", fontColor:"white" },
-        { displayName:"水", color:"skyblue", fontColor:"black" },
+        { displayName:"ﾚﾌｨｽﾗ", color:"bisque", fontColor:"black" },
+        // { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
+        // { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
+        // { displayName:"灰", color:"gray", fontColor:"white" },
+        // { displayName:"水", color:"skyblue", fontColor:"black" },
     ];
 
     // 初期状態は5色にしておく
