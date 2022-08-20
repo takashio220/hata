@@ -6,18 +6,18 @@ $(function()
     // enabledHataOrder[]: cookieを読み込んでhataBaseからhataに使用する色をコピーするのに使う
     // colorは、webカラー用のカラーネームを使用(カラーコードだとハイライト表示処理でエラー)
     const hataBase = [
-        { displayName:"赤", color:"red", fontColor:"white" },
-        { displayName:"黄", color:"yellow", fontColor:"black" },
-        { displayName:"青", color:"blue", fontColor:"white" },
-        { displayName:"黒", color:"black", fontColor:"white" },
-        { displayName:"緑", color:"green", fontColor:"white" },
-        { displayName:"ｵﾚﾝｼﾞ", color:"orange", fontColor:"black" },
-        { displayName:"紫", color:"purple", fontColor:"white" },
-        { displayName:"ﾋﾟﾝｸ", color:"pink", fontColor:"black" },
-        { displayName:"茶", color:"brown", fontColor:"white" },
-        { displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
-        { displayName:"ﾗﾁｽﾐ", color:"yellowgreen", fontColor:"black" },
-        { displayName:"ﾚﾌｨｽﾗ", color:"bisque", fontColor:"black" },
+        { id:0, displayName:"赤", color:"red", fontColor:"white" },
+        { id:1, displayName:"黄", color:"yellow", fontColor:"black" },
+        { id:2, displayName:"青", color:"blue", fontColor:"white" },
+        { id:3, displayName:"黒", color:"black", fontColor:"white" },
+        { id:4, displayName:"緑", color:"green", fontColor:"white" },
+        { id:5, displayName:"ｵﾚﾝｼﾞ", color:"orange", fontColor:"black" },
+        { id:6, displayName:"紫", color:"purple", fontColor:"white" },
+        { id:7, displayName:"ﾋﾟﾝｸ", color:"pink", fontColor:"black" },
+        { id:8, displayName:"茶", color:"brown", fontColor:"white" },
+        { id:9, displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
+        { id:10,displayName:"ﾗﾁｽﾐ", color:"yellowgreen", fontColor:"black" },
+        { id:11,displayName:"ﾚﾌｨｽﾗ", color:"bisque", fontColor:"black" },
         // { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
         // { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
         // { displayName:"灰", color:"gray", fontColor:"white" },
@@ -61,7 +61,7 @@ $(function()
     let janNum = 10; //じゃーんの回数->janNumsから選ばれる
     let newSoundIndex = 0; //新しい音がこのindex以降に入ってもよい
     let newSoundCount = 0; //新しい音がでる回数(0のときは他の音と均等にする)
-    let highlightedHataColor = ""; //現在ハイライト中のはたのbackgroundColor
+    let highlightedHataId = ""; //現在ハイライト中のはたのbackgroundColor
     let mt = new MersenneTwister(); //乱数(メルセンヌツイスター)
     let previousJanNum = janNum; //レッスンが生成されたときのjanNumを記憶
 
@@ -219,8 +219,8 @@ $(function()
             for(let j=0;j<Math.max(...janNums);j++)
             {
                 if(j<l[i].length){
-                    _numTr.append($("<td>",{class:`tdJanNum ${l[i][j].color}`,text:parseInt(j)+1}));
-                    let _td = $("<td>",{class:`tdHata ${l[i][j].color}`});
+                    _numTr.append($("<td>",{class:`tdJanNum ${l[i][j].color}`, "data-id":l[i][j].id, text:parseInt(j)+1}));
+                    let _td = $("<td>",{class:`tdHata ${l[i][j].color}`, "data-id":l[i][j].id});
                         _td.css({ "background-color": l[i][j].color, "color": l[i][j].fontColor });
                         _td.append($("<div>",{class:"mask",text:l[i][j].displayName}));
                     _hataTr.append(_td);
@@ -241,7 +241,7 @@ $(function()
 
         //ハタの各マスにハイライト機能を追加
         $('.tdHata').click(function(){
-            highlightHata( hataBase[ hataBase.findIndex(e => e.displayName == $(this).text() ) ] );
+            highlightHata( hataBase[parseInt($(this).data().id)] );
         });
 
         //選んだレッスンtableをハイライトする
@@ -306,7 +306,7 @@ $(function()
     {
         $(".tdHata,.tdJanNum").removeClass("transparent highlight");
         $(".tdJanNum").css({"background-color":"", "color":""});
-        highlightedHataColor = "";
+        highlightedHataId = "";
     }
 
     //レッスンのハイライト表示をリセット
@@ -321,15 +321,15 @@ $(function()
     {
 
         //現在ハイライト中の色以外がクリックされたときはハイライト色を変更
-        if(highlightedHataColor != h.color)
+        if(highlightedHataId != h.id)
         {
             //リセット
             resetHataHighlight();
             $('.tdHata,.tdJanNum').addClass("transparent");
-            $(`.tdHata.${h.color}`).removeClass("transparent");
-            $(`.tdHata.${h.color},.tdJanNum.${h.color}`).addClass("highlight");
-            $(`.tdJanNum.${h.color}`).css({"background-color":h.color,"color":h.fontColor});
-            highlightedHataColor = h.color;
+            $(`.tdHata.${h.color}[data-id="${h.id}"]`).removeClass("transparent");
+            $(`.tdHata.${h.color},.tdJanNum.${h.color}`).filter(`[data-id="${h.id}"]`).addClass("highlight");
+            $(`.tdJanNum.${h.color}[data-id="${h.id}"]`).css({"background-color":h.color,"color":h.fontColor});
+            highlightedHataId = h.id;
         }
         else{ resetHataHighlight(); }
         showResetHighlightButton();
@@ -458,56 +458,7 @@ $(function()
 
         //印刷ボタンの処理
         $('#printLesson').click(function(){ window.print(); });
-
-        //再生メニュー表示ボタンの機能
-        //音声ファイルを読み込んでおく
-        // $("#togglePlay").click(function(){
-        //     loadWavFiles();
-        //     $("#lessonMaker").toggleClass("hidden");
-        //     $("#playButtons").toggleClass("hidden");
-        // });
     }
-
-    //音声ファイルを読み込む(音声ボタンを押したときに1回だけ実行)
-    //ボタン生成とそれに対応するイベントハンドラも追加しておく
-    // let loadWavFiles = (function(){
-    //     let executed = false;
-    //     let playingAudio = null;
-    //     return function() {
-    //         if (!executed) {
-    //             executed = true;
-    //             wavFiles.map(function(c,k){
-    //                 //音声ファイルをロードする
-    //                 c.files.map(function(f){
-    //                     f.wav = new Audio(`${wavDir}${f.path}`);
-    //                     f.wav.preload = "auto";
-    //                     f.wav.volume = 1;
-    //                     f.wav.load();
-    //                     f.wav.addEventListener("play", function(e){ playingAudio = e.target; });
-    //                     f.wav.addEventListener("ended", function(){
-    //                         f.wav.pause();
-    //                         f.wav.currentTime = 0;
-    //                     }, false);
-    //                 });
-    //                 //ボタン生成
-    //                 let wavButtons = $();
-    //                 wavButtons = wavButtons.add($("<button>",{type:"button",class:"playButton",value:k,text:hata[k].displayName}))
-    //                     .css({"background-color":hata[k].color, "color":hata[k].fontColor});
-    //                 $("#playButtons").append(wavButtons);
-    //             });
-    //             //イベントハンドラ
-    //             $(".playButton").click(function(){
-    //                 if(playingAudio !== null){
-    //                     playingAudio.pause();
-    //                     playingAudio.currentTime = 0;
-    //                 }
-    //                 let i = parseInt(this.value);
-    //                 let r = mt.nextInt(0, wavFiles[i].files.length);
-    //                 wavFiles[i].files[r].wav.play();
-    //             });
-    //         }
-    //     }
-    // })();
 
     //ページ初期化
     loadCookie();
