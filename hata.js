@@ -18,6 +18,7 @@ $(function()
         { id:9, displayName:"ﾗﾁｽﾐ", color:"whitesmoke", fontColor:"black" },
         { id:10,displayName:"ﾗﾁｽﾐ", color:"yellowgreen", fontColor:"black" },
         { id:11,displayName:"ﾚﾌｨｽﾗ", color:"bisque", fontColor:"black" },
+        { id:12,displayName:"ﾐｷﾞｽｼ", color:"mediumpurple", fontColor:"white" },
         // { displayName:"黄緑", color:"yellowgreen", fontColor:"black" },
         // { displayName:"うす紫", color:"mediumpurple", fontColor:"white" },
         // { displayName:"灰", color:"gray", fontColor:"white" },
